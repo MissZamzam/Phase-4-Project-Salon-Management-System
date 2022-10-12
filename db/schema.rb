@@ -16,7 +16,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_11_132157) do
     t.integer "service_id"
     t.string "name"
     t.string "email"
-    t.string "service"
     t.string "appointment_date"
     t.string "appointment_time"
     t.datetime "created_at", null: false
