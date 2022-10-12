@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-const Appointment = () => {
+const Appointments = () => {
 
     
     return (
@@ -54,4 +54,4 @@ const Appointment = () => {
     )
 }
  
-export default Appointment;
+export default Appointments;
