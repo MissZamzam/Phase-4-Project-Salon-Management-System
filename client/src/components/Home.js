@@ -19,7 +19,10 @@ function Home () {
         .then((data)=>setService(data))
     }, [])
     return <>
-        <h1>home page</h1>
+        <h1 tex>Gossip & Glamour
+</h1>
+        <p>Choose from one of our collective services</p>
+        {/* <p>To a full beauty and co experience</p> */}
         <Container>
             
         <Row>
