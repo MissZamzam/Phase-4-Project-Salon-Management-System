@@ -1,11 +1,7 @@
 import React from "react";
-
-
-
-const Login = () => {
+const Login = ({setUser}) => {
     const [username, setUsername] = ("")
     const [password, setPassword] = ("")
-    const [erros, setErrors] = ([])
 
 
     function handleSubmit(e) {
@@ -18,22 +14,21 @@ const Login = () => {
             body: JSON.stringify({ username, password }),
         }).then((r) => {
             if (r.ok) {
-                r.json().then((user) => setUsername(user));
-            } else {
-                r.json().then((errors) => setErrors(Object.values(errors)))
-            }
+                r.json().then((user) => setUser(user));
+            } 
+            
         });
     }
     return ( 
 
         <form onSubmit={handleSubmit}>
   <div class="form-outline mb-4 mt-5">
-    <input type="text" id="form1Example1" class="form-control" value={username} onChange={(e)=>setUsername(e.target.value)}/>
+    <input type="username" id="form1Example1" class="form-control" value={username} onChange={(e) => setUsername(e.target.value)}/>
     <label class="form-label" for="form1Example1">Username</label>
   </div>
 
   <div class="form-outline mb-4">
-    <input type="password" id="form1Example2" class="form-control" value={password} onChange={(e)=>setPassword(e.target.value)}/>
+    <input type="password" id="form1Example2" class="form-control" value={password} onChange={(e) => setPassword(e.target.value)}/>
     <label class="form-label" for="form1Example2">Password</label>
   </div>
 

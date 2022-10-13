@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp"
 
-
 function App() {
   const [user, setUser] = useState(null)
 
@@ -26,13 +25,13 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/appointment" element={<Appointment />} />
-            <Route exact path="/book" element={<Appointment />} /> 
-            <Route exact path="/signup" element={<SignUp />} /> 
-            <Route exact path="/login" element={<Login />} /> 
+            <Route exact path="/signup" element={<SignUp setUser={setUser}/>} /> 
+            <Route exact path="/login" element={<Login setUser={setUser}/>} /> 
 
           </Routes>
         </div>
       </Router>
+      {/* <Appointment /> */}
     </div>
   );
 }

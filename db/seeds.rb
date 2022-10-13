@@ -27,7 +27,7 @@ image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgIHl8yMr_4brMP
 name: "Henna & Tatoo", 
 description:"Black henna is advertised as a fun, temporary decoration that, because of its dark stain, looks like a real tattoo. It is supposed to last only one to three weeks, but some people are getting a nasty surprise after they've paid for their new look.")
 service8 = Service.create(
-image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShVKc22oE1ooNX-7XKTJSezclSIbOvSKXnbA&usqp=CAU", 
+image_url:"https://static.wixstatic.com/media/11062b_80fd4a7ca5434b9d9fd120fcbce9c017~mv2.jpeg/v1/fill/w_640,h_724,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_80fd4a7ca5434b9d9fd120fcbce9c017~mv2.jpeg", 
 name: "Skin Clinic", 
 description:"Whether you suffer from stubborn acne, have a recurring skin condition or simply want to set yourself up with a personalised skincare regime, our professional skin clinic should be your first stop on the road to a flawless, healthy complexion")
 service9 = Service.create(
@@ -46,7 +46,7 @@ customer6 = Customer.create(name:"Audry", email:"audrys@gmail.com", phone_number
 
 puts "seeding appointment table"
     appointment1 = Appointment.create(
-    service_id: service9.id, customer_id: customer1.id, name:"Jane Michael", email: "JaneMike@gmail.com", appointment_date: "18/11/2022", appointment_time: "1212hrs",servicename:"Facials")
+    service_id: service9.id, customer_id: customer1.id, name:"Jane Michael", email: "JaneMike@gmail.com", appointment_date: "18/11/2022", appointment_time: "1212hrs",service:"Facials")
 
     appointment2 = Appointment.create(
     service_id: service8.id, customer_id: customer2.id, name:"Halima Ali", email: "Halima@gmail.com", appointment_date: "12/11/2022", appointment_time: "1112hrs",servicename:"Facials")

@@ -1,4 +1,7 @@
 class ServicesController < ApplicationController
+
+    skip_before_action :authorized, only: [:index, :show]
+
     def index 
         services = Service.all 
         render json: services

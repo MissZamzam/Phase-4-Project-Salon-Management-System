@@ -5,23 +5,20 @@ import { Card, Row, Col, Container } from "react-bootstrap";
 function Home () {
 
     const [services, setServices] = useState([])
-    // useEffect(()=>{
-    //     const fetchData = async () => {
-    //         const response = await fetch("http://127.0.0.1:3000/services")
-    //         const serviceData = await response.json()
-    //         setService(serviceData.slice(0,15))
-    //     }
-    //     fetchData()
-    // },[])
+  
     useEffect(()=>{
         fetch("/services")
         .then((res) => res.json())
         .then((data)=>setServices(data))
     }, [])
     return <>
-        <h1 tex>Gossip & Glamour
-</h1>
-        <p>Choose from one of our collective services</p>
+        {/* <h1 tex>Gossip & Glamour</h1> */}
+        <br></br>
+        <br></br>
+        <p> At Gossip & Glamour, we offer a complete range of beauty services to fit your needs.
+            From hair styling, to facial skin care,to body massage,to manicures,pedicures and more,
+            We are your all-in-one resource for a beautiful new you.  Come experience it today</p>
+            <br></br>
         {/* <p>To a full beauty and co experience</p> */}
         <Container>
             
