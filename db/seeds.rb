@@ -46,22 +46,22 @@ customer6 = Customer.create(name:"Audry", email:"audrys@gmail.com", phone_number
 
 puts "seeding appointment table"
     appointment1 = Appointment.create(
-    service_id: service9.id, customer_id: customer1.id, name:"Jane Michael", email: "JaneMike@gmail.com", appointment_date: "18/11/2022", appointment_time: "1212hrs")
+    service_id: service9.id, customer_id: customer1.id, name:"Jane Michael", email: "JaneMike@gmail.com", appointment_date: "18/11/2022", appointment_time: "1212hrs",servicename:"Facials")
 
     appointment2 = Appointment.create(
-    service_id: service8.id, customer_id: customer2.id, name:"Halima Ali", email: "Halima@gmail.com", appointment_date: "12/11/2022", appointment_time: "1112hrs")
+    service_id: service8.id, customer_id: customer2.id, name:"Halima Ali", email: "Halima@gmail.com", appointment_date: "12/11/2022", appointment_time: "1112hrs",servicename:"Facials")
 
     appointment3 = Appointment.create( 
-    service_id: service4.id, customer_id: customer3.id, name:"Norah James", email: "Noraj@gmail.com", appointment_date: "10/11/2022", appointment_time: "1012hrs")
+    service_id: service4.id, customer_id: customer3.id, name:"Norah James", email: "Noraj@gmail.com", appointment_date: "10/11/2022", appointment_time: "1012hrs",servicename:"Facials")
 
     appointment4 = Appointment.create( 
-    service_id: service3.id, customer_id: customer4.id, name:"Miriam Ali", email: "Miriam@gmail.com", appointment_date: "18/10/2022", appointment_time: "1412hrs")
+    service_id: service3.id, customer_id: customer4.id, name:"Miriam Ali", email: "Miriam@gmail.com", appointment_date: "18/10/2022", appointment_time: "1412hrs",servicename:"Facials")
 
     appointment5 = Appointment.create( 
-    service_id: service7.id, customer_id: customer5.id, name:"Zamzam Hassan", email: "ZamzamH@gmail.com", appointment_date: "09/11/2022", appointment_time: "1010hrs")
+    service_id: service7.id, customer_id: customer5.id, name:"Zamzam Hassan", email: "ZamzamH@gmail.com", appointment_date: "09/11/2022", appointment_time: "1010hrs",servicename:"Facials")
 
     appointment6 = Appointment.create( 
-    service_id: service2.id, customer_id: customer6.id, name:"Rose Scofield", email: "rose@gmail.com", appointment_date: "06/11/2022", appointment_time: "1232hrs")
+    service_id: service2.id, customer_id: customer6.id, name:"Rose Scofield", email: "rose@gmail.com", appointment_date: "06/11/2022", appointment_time: "1232hrs", servicename:"Facials")
 
     puts "end of seeding"
 

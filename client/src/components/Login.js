@@ -28,7 +28,7 @@ const Login = () => {
 
         <form onSubmit={handleSubmit}>
   <div class="form-outline mb-4 mt-5">
-    <input type="email" id="form1Example1" class="form-control" value={username} onChange={(e)=>setUsername(e.target.value)}/>
+    <input type="text" id="form1Example1" class="form-control" value={username} onChange={(e)=>setUsername(e.target.value)}/>
     <label class="form-label" for="form1Example1">Username</label>
   </div>
 
