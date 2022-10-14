@@ -1,53 +1,59 @@
-import React from "react";
-const Login = ({setUser}) => {
-    const [username, setUsername] = ("")
-    const [password, setPassword] = ("")
+// import { useState } from "react";
+// import styled from "styled-components";
+// import LoginForm from "./LoginForm";
+// import SignUpForm from "./SignUpForm";
+// import Button  from "./Button";
 
+// function Login({ onLogin }) {
+//   const [showLogin, setShowLogin] = useState(true);
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        fetch("/login", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ username, password }),
-        }).then((r) => {
-            if (r.ok) {
-                r.json().then((user) => setUser(user));
-            } 
-            
-        });
-    }
-    return ( 
+//   return (
+//     <Wrapper>
+//       <Logo>Reciplease</Logo>
+//       {showLogin ? (
+//         <>
+//           <LoginForm onLogin={onLogin} />
+//           <Divider />
+//           <p>
+//             Don't have an account? &nbsp;
+//             <Button color="secondary" onClick={() => setShowLogin(false)}>
+//               Sign Up
+//             </Button>
+//           </p>
+//         </>
+//       ) : (
+//         <>
+//           <SignUpForm onLogin={onLogin} />
+//           <Divider />
+//           <p>
+//             Already have an account? &nbsp;
+//             <Button color="secondary" onClick={() => setShowLogin(true)}>
+//               Log In
+//             </Button>
+//           </p>
+//         </>
+//       )}
+//     </Wrapper>
+//   );
+// }
 
-        <form onSubmit={handleSubmit}>
-  <div class="form-outline mb-4 mt-5">
-    <input type="username" id="form1Example1" class="form-control" value={username} onChange={(e) => setUsername(e.target.value)}/>
-    <label class="form-label" for="form1Example1">Username</label>
-  </div>
+// const Logo = styled.h1`
+//   font-family: "Permanent Marker", cursive;
+//   font-size: 3rem;
+//   color: deeppink;
+//   margin: 8px 0 16px;
+// `;
 
-  <div class="form-outline mb-4">
-    <input type="password" id="form1Example2" class="form-control" value={password} onChange={(e) => setPassword(e.target.value)}/>
-    <label class="form-label" for="form1Example2">Password</label>
-  </div>
+// const Wrapper = styled.section`
+//   max-width: 500px;
+//   margin: 40px auto;
+//   padding: 16px;
+// `;
 
-  <div class="row mb-4">
-    <div class="col d-flex justify-content-center">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-        <label class="form-check-label" for="form1Example3"> Remember me </label>
-      </div>
-    </div>
+// const Divider = styled.hr`
+//   border: none;
+//   border-bottom: 1px solid #ccc;
+//   margin: 16px 0;
+// `;
 
-    <div class="col">
-      <a href="#!">Forgot password?</a>
-    </div>
-  </div>
-
-  <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-</form>
-     );
-}
- 
-export default Login;
+// export default Login;
