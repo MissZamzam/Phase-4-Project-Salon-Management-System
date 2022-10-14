@@ -12,7 +12,7 @@ function Appointment({handlePosting}) {
 
   function handleSubmit(e){
     e.preventDefault();
-    fetch(`http://localhost:3000/appointments`,{
+    fetch(`/appointments`,{
         method: "POST",
         headers: {
             "Content-Type": "application/json"

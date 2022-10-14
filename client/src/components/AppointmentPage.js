@@ -9,7 +9,7 @@ function AppointmentPage(){
     // const navigate = useNavigate()
 
     useEffect(() => {
-      fetch('http://127.0.0.1:3000/appointments')
+      fetch('/appointments')
       .then(r => r.json())
       .then(data => setAllAppointments(data))
     }, []);
@@ -19,7 +19,7 @@ function AppointmentPage(){
     }
 
     function deleteAppointment(id){
-      fetch(`http://127.0.0.1:3000/appointments/${id}`,{
+      fetch(`/appointments/${id}`,{
           method: "DELETE",
       })
       .then(r => r.json())
