@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Error from "./Error";
 import FormField from "./FormField";
+import  './LoginForm.css'
+
 function LoginForm({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -25,7 +27,7 @@ function LoginForm({ onLogin }) {
     });
   }
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
+    <form onSubmit={handleSubmit} autoComplete="off" >
       <div className="containerr">
       <div className="contact-boxx">
         <div className="lefty"></div>
@@ -58,11 +60,11 @@ function LoginForm({ onLogin }) {
               <Error key={err}>{err}</Error>
             ))}
           </FormField>
-          <div class="socials">
+          {/* <div class="socials">
             <a href=" "><i class="fab fa-facebook-f"></i></a>
             <a href=" "><i class="fab fa-google-plus-g"></i></a>
             <a href=" "><i class="fa-brands fa-yahoo"></i></a>
-          </div>
+          </div> */}
         </div>
       </div>
       </div>
