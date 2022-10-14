@@ -9,6 +9,9 @@ gem "rails", "~> 7.0.4"
 
 gem 'bcrypt'
 
+
+
+
 # Use sqlite3 as the database for Active Record
 
 # Use the Puma web server [https://github.com/puma/puma]
