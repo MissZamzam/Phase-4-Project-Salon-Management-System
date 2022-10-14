@@ -75,7 +75,7 @@ function NavBar({ user, setUser }) {
                                 Appointment
                               </NavLink>
                             </li>
-                            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded sign-in" onClick={handleLogoutClick}>
+                            <button class="bg-pink-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded sign-in" onClick={handleLogoutClick}>
                               <NavLink className="hover:border-b-4 pb-2 border-white" to="/logout">
                                 Logout
                               </NavLink>
