@@ -19,7 +19,7 @@ function Home () {
         .then((data)=>setServices(data))
     }, [])
     return <>
-        {/* <h1 tex>Gossip & Glamour</h1> */}
+        <h1 className='glam'>Gossip & Glamour</h1>
         <br></br>
         <p> At Gossip & Glamour, we offer a complete range of beauty services to fit your needs.
             From hair styling, to facial skin care,to body massage,to manicures,pedicures and more,

@@ -15,14 +15,14 @@ function App() {
       }
     })
   },[])
-  // if (!user) return <Login onLogin={setUser} />;
+  if (!user) return <Login onLogin={setUser} />;
   return (
     <div className="App">
       <Router>
       <Navbar user={user} setUser={setUser} />        <div className="container">
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/appointment" element={<Appointment />} />
+            <Route exact path="/appointments" element={<Appointment />} />
             {/* <Route exact path="/signup" element={<SignUp />} />  */}
             <Route exact path="/login" element={<Login />} /> 
 
