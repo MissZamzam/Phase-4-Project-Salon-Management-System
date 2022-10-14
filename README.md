@@ -1,24 +1,23 @@
-# README
+# Phase 4 Project - Salon Management System
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Goal: Build an API using Rails with React Frontend
 
-Things you may want to cover:
+### Setup
+ # Create rails api
+ rails new Salon --api -minimal
+$ cd project
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## cd into the Salon rails api
 
-* Deployment instructions
 
-* ...
+## Run 
+
+    rails g resource service name image_url description
+
+    rails g resource appointment name appointment_date appointment_time
