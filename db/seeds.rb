@@ -25,7 +25,7 @@ image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdxbdh1xZniZqN9
 name: "Manicure", 
 description:"Whether you like your nails short and sweet, square, almond or oval, there’s a reason why manicures are up there as one of the most popular beauty treatments for women today. From french to gels, acrylic to paraffin, our professional manis will buff your hands and nails to perfection, and with hundreds of colours to choose from, will put the perfect finishing touch on any outfit.")
 service7 = Service.create( 
-image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7RYyde7pff390tSYUfjqZsjTBbRx0PV0Upg&usqp=CAU", 
+image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPgtsayfhWUf-t2Dr8O7OWwRVMjt-RoK__Nb0osCE1K9nLaXn48OLoMiRZyqoLqX6vosU&usqp=CAU", 
 name: "Henna & Tatoo", 
 description:"Black henna is advertised as a fun, temporary decoration that, because of its dark stain, looks like a real tattoo. It is supposed to last only one to three weeks, but some people are")
 service8 = Service.create(
