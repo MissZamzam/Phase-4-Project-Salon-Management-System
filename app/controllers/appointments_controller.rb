@@ -12,8 +12,7 @@ class AppointmentsController < ApplicationController
 
     def create
         appointment = Appointment.create(
-            customer_id: params[:customer_id],
-            service_id: params[:service_id],
+            user_id: params[:user_id],
             name: params[:name], 
             email: params[:email],
             appointment_date: params[:appointment_date],

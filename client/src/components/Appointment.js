@@ -1,91 +1,43 @@
-import React from 'react'
-import './Appointment.css';
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react'
 
-function Appointment({handlePosting}) {
-  const [appointmentData, setAppointmentData] = useState({
-    name: '',
-    email: '',
-    appointment_date: '',
-    appointment_time: '',
-  })
+function Appointment() {
+    const [appoint, setAppoint] = useState([])
 
-  function handleSubmit(e){
-    e.preventDefault();
-    fetch(`/appointments`,{
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(appointmentData)
-    })
-    .then(r => r.json())
-    .then(data => {
-        handlePosting(data)
-    })
+    useEffect(()=>{
+        fetch("/appointments")
+        .then(resp => resp.json())
+        .then(data=> 
+            setAppoint(data))
+    },[])
 
-    setAppointmentData({
-        name: '',
-        email: '',
-        appointment_date: '',
-        appointment_time: '',
-    })
-}
 
-  function handleChange(e){
-    setAppointmentData({
-        ...appointmentData, [e.target.name]: e.target.value,
-    });
-} 
+    
   return (
-    <div className="container3">
-      <div className="contact-box1">
-        <div className="lefti"></div>
-        <div className="right">
-          <h2>Book</h2>
-          <form>
-            <input
-              type='text'
-              name='name'
-              required
-              className ="field"
-              placeholder='name'
-              value={appointmentData.name}
-              onChange={handleChange}
-            ></input>
-            <br />
-            <input
-              type='email'
-              name='email'
-              required
-              className='field'
-              placeholder='email'
-              value={appointmentData.email}
-              onChange={handleChange}
-            ></input>
-            <input
-               type='number'
-               name='appointment_date'
-               placeholder="appointment_date"
-               className='field'
-               value={appointmentData.appointment_date}
-              onChange={handleChange}
-            ></input>
-           <input
-               type='number'
-               name='appointment_time'
-               required
-               className='field'
-               placeholder='appointment_time'
-               value={appointmentData.appointment_time}
-              onChange={handleChange}
-           ></input>
-          <button className="btn2" onClick={handleSubmit}>Send</button>
-          </form>
-        </div>
-      </div>
-	  </div>
+    <div>
+      {appoint.map((table)=>{
+        return(
+<div class="max-w-sm rounded overflow-hidden shadow-lg">
+  <div class="px-6 py-4">
+  <p class="text-gray-700 text-base">Name: {table.name}</p>
+    <p class="text-gray-700 text-base">Email: {table.email}</p>
+    <p class="text-gray-700 text-base">Appointment Date: {table.appointment_date}</p>
+    <p class="text-gray-700 text-base">Appointment Time: {table.appointment_time}</p>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+  Edit
+</button>    
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+  Delete
+</button>
+
+  </div>
+
+</div>
+        )
+       
+
+      })}
+    </div>
   )
 }
 
-export default Appointment;
+export default Appointment

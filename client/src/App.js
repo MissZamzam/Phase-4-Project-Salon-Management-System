@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react"
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Appointment from "./components/Appointment";
+import Book from "./components/Book";
+import Appointment from "./components/Appointment"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
 
@@ -22,8 +23,8 @@ function App() {
       <Navbar user={user} setUser={setUser} />        <div className="container">
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/appointments" element={<Appointment />} />
-            {/* <Route exact path="/signup" element={<SignUp />} />  */}
+            <Route exact path="/book" element={<Book user={user}/>} />
+            <Route exact path="/appointment" element={<Appointment />} />
             <Route exact path="/login" element={<Login />} /> 
 
           </Routes>

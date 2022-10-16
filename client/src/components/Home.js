@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Card, Row, Col, Container } from "react-bootstrap";
+import './Home.css';
 
 
 function Home () {
@@ -20,8 +21,8 @@ function Home () {
     }, [])
     return <>
         {/* <h1 className='glam'>Gossip & Glamour</h1> */}
-        <br></br>
-        <p> At Gossip & Glamour, we offer a complete range of beauty services to fit your needs.
+        <br></br><br></br>
+        <p className='paragraph'> At Gossip & Glamour, we offer a complete range of beauty services to fit your needs.
             From hair styling, to facial skin care,to body massage,to manicures,pedicures and more,
             We are your all-in-one resource for a beautiful new you.  Come experience it today</p>
         {/* <p>To a full beauty and co experience</p> */}

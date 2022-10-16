@@ -18,7 +18,7 @@ function NavBar({ user, setUser }) {
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <a href="javascript:void(0)">
-                            <h1 className="text-2xl font-bold hospital-logo">Gossip & Glamour</h1>
+                            <h1 className="text-2xl font-bold hospital-logo" id="gos">Gossip & Glamour</h1>
                         </a>
                         <div className="md:hidden">
                             <button
@@ -71,7 +71,12 @@ function NavBar({ user, setUser }) {
                               </NavLink>
                             </li>
                             <li className="text-gray-600 hover:text-blue-600">
-                              <NavLink className="hover:border-b-4 pb-2 border-white" to="/appointments">
+                              <NavLink className="hover:border-b-4 pb-2 border-white" to="/book">
+                                Book
+                              </NavLink>
+                            </li>
+                            <li className="text-gray-600 hover:text-blue-600">
+                              <NavLink className="hover:border-b-4 pb-2 border-white" to="/appointment">
                                 Appointment
                               </NavLink>
                             </li>

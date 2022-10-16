@@ -25,10 +25,18 @@ image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdxbdh1xZniZqN9
 name: "Manicure", 
 description:"Whether you like your nails short and sweet, square, almond or oval, there’s a reason why manicures are up there as one of the most popular beauty treatments for women today. From french to gels, acrylic to paraffin, our professional manis will buff your hands and nails to perfection, and with hundreds of colours to choose from, will put the perfect finishing touch on any outfit.")
 service7 = Service.create( 
-image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFbxxxsXLRglbAKKKD3PLFen7kFP0cl3iYl6xrRg4vR__91Y6bhIBTgnwlsXyOFlih_7o&usqp=CAU", 
+image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7RYyde7pff390tSYUfjqZsjTBbRx0PV0Upg&usqp=CAU", 
 name: "Henna & Tatoo", 
-description:"Black henna is advertised as a fun, temporary decoration that, because of its dark stain, looks like a real tattoo. It is supposed to last only one to three weeks, but some people are getting a nasty surprise after they've paid for their new look.")
+description:"Black henna is advertised as a fun, temporary decoration that, because of its dark stain, looks like a real tattoo. It is supposed to last only one to three weeks, but some people are")
 service8 = Service.create(
-image_url:"https://static.wixstatic.com/media/11062b_80fd4a7ca5434b9d9fd120fcbce9c017~mv2.jpeg/v1/fill/w_640,h_724,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_80fd4a7ca5434b9d9fd120fcbce9c017~mv2.jpeg", 
+image_url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkBctkfxxNN_cWa9DlM7_kXN-yEFRsydS6_Q&usqp=CAU", 
 name: "Skin Clinic", 
 description:"Whether you suffer from stubborn acne, have a recurring skin condition or simply want to set yourself up with a personalised skincare regime, our professional skin clinic should be your first stop on the road to a flawless, healthy complexion")
+
+
+appointment1 = Appointment.create(
+    name: "Jackie",
+    email: "jski@gmail.com",
+    appointment_date: "12/12/2022",
+    appointment_time: "1100"
+)
