@@ -21,7 +21,9 @@ function Appointment({appointment, onDeleteAppointment}) {
 
         .then(() => {        
           const deleting = appoint.filter((table) => table.id !== id);   
-               setAppoint(deleting);      })
+               setAppoint(deleting);     
+              console.log('data')
+              })
         .catch((err) => console.log(err));    alert("delete was successful");  
     }
 
@@ -42,7 +44,7 @@ function Appointment({appointment, onDeleteAppointment}) {
     <p class="text-gray-700 text-base">Appointment Time: {table.appointment_time}</p>
     <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
   Edit
-  
+
 </button>    
 <button class="bg-pink-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => handleDeleteClick(table.id)}>
   Delete
