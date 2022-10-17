@@ -34,6 +34,7 @@ function Appointment({appointment, onDeleteAppointment}) {
 <div  class="max-w-sm rounded overflow-hidden shadow-lg">
   <div class="px-6 py-4" >
     <h1>Your Appointment</h1>
+    
     <br></br>
   <p class="text-gray-700 text-base">Name: {table.name}</p>
     <p class="text-gray-700 text-base">Email: {table.email}</p>
