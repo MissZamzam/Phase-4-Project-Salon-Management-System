@@ -1,5 +1,6 @@
 class AppointmentsController < ApplicationController
-    
+    skip_before_action :authorized, only: [:destroy]
+
     def index 
         appointments = Appointment.all 
         render json: appointments
@@ -21,5 +22,16 @@ class AppointmentsController < ApplicationController
             render json: appointment, status: :created
         
     
+      end
+      def destroy
+        appointment = Appointment.find(params[:id])
+        if appointment
+            appointment.destroy
+            # head :no_content
+            render json: {"success": "Appointment not found"}
+        
+        else
+            render json: {error: "Appointment not found"}, status: :not_found
+        end
       end
 end
