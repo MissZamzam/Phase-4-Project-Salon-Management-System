@@ -23,21 +23,21 @@ const navigate = useNavigate()
   function handleSubmit(e){
     e.preventDefault();
     fetch(`/appointments`,{
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(
-          {
-            name,
-            email,
-            appointment_date,
-            appointment_time,
-            user_id,
-          }
-        )
-    })
-    .then(r => r.json())
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(
+        {
+          name,
+          email,
+          appointment_date,
+          appointment_time,
+          user_id,
+        }
+      )
+  })
+  .then(r => r.json())
     // .then(data=>
       // console.log(data))
     navigate("/appointment")
@@ -73,7 +73,7 @@ const navigate = useNavigate()
               onChange={(e)=>{setEmail(e.target.value)}}
             ></input>
             <input
-               type='number'
+               type='date'
                name='appointment_date'
                placeholder="appointment_date"
                className='field'
@@ -81,7 +81,7 @@ const navigate = useNavigate()
                onChange={(e)=>{setAppointment_date(e.target.value)}}
                ></input>
            <input
-               type='number'
+               type='time'
                name='appointment_time'
                required
                className='field'
