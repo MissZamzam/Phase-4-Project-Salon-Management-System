@@ -72,10 +72,10 @@ function Appointment({appointment, onDeleteAppointment}) {
     <p class="text-gray-700 text-base">Appointment Date: {table.appointment_date}</p>
     <p class="text-gray-700 text-base">Appointment Time: {table.appointment_time}</p>
     <button type="button" class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=> handleEdit(table)}>
-       Edit
+       Change
     </button>  
   <button class="bg-pink-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => handleDeleteClick(table.id)}>
-  Delete
+  Cancel
 </button>
 
   </div>
@@ -90,7 +90,7 @@ function Appointment({appointment, onDeleteAppointment}) {
        <div class="modal-dialog">
          <div class="modal-content">
            <div class="modal-header">
-             <h5 class="modal-title" id="exampleModalLabel"> Appointment Edit Form</h5>
+             <h5 class="modal-title" id="exampleModalLabel">Change your Appointment</h5>
              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
            </div>
            <div class="modal-body">
