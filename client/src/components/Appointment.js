@@ -113,7 +113,7 @@ function Appointment({appointment, onDeleteAppointment}) {
               value={editData.email}   />
               <input
               onChange={handleChange}
-               type='number'
+               type='date'
                name='appointment_date'
                placeholder="appointment_date"
                className='field'
@@ -121,7 +121,7 @@ function Appointment({appointment, onDeleteAppointment}) {
             />
            <input
            onChange={handleChange}
-               type='number'
+               type='time'
                name='appointment_time'
                required
                className='field'
