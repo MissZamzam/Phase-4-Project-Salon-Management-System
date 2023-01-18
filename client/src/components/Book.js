@@ -89,7 +89,7 @@ const navigate = useNavigate()
                value={appointment_time}
                onChange={(e)=>{setAppointment_time(e.target.value)}}
                ></input>
-          <button className="btn2" type="submit" onClick={handleSubmit}>Send</button>
+          <button className="btn2" type="submit" onClick={handleSubmit}>Book Appointment</button>
           </form>
         </div>
       </div>

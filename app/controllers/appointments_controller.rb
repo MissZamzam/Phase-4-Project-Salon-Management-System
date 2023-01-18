@@ -25,6 +25,7 @@ class AppointmentsController < ApplicationController
       end
 
       def update
+        # byebug
         appointment = Appointment.find_by(id: params[:id])
         if appointment
             Appointment.update(appointment_params)
