@@ -13,7 +13,14 @@ function Login({ onLogin }) {
           <LoginForm onLogin={onLogin} />
           <Divider />
           <div class="reg-log-options">
-            <p>
+            <p 
+             style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginTop:'5px'
+          }}
+            >
               Don't have an account? &nbsp;
               <Button color="secondary" onClick={() => setShowLogin(false)}>
                 Sign Up
@@ -26,7 +33,14 @@ function Login({ onLogin }) {
           <SignUpForm onLogin={onLogin} />
           <Divider />
           <div class="reg-log-options">
-            <p>
+            <p
+               style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginTop:'5px'
+            }}
+            >
               Already have an account? &nbsp;
               <Button color="secondary" onClick={() => setShowLogin(true)}>
                 Log In
